@@ -13,4 +13,6 @@ var push_notifications_module_1 = require('./src/push-notifications.module');
 exports.PushNotificationsModule = push_notifications_module_1.PushNotificationsModule;
 var push_notifications_service_1 = require('./src/push-notifications.service');
 exports.PushNotificationsService = push_notifications_service_1.PushNotificationsService;
+var icons_1 = require('./src/icons');
+exports.defaultIcons = icons_1.defaultIcons;
 //# sourceMappingURL=components.js.map

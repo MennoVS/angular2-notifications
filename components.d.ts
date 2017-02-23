@@ -5,3 +5,5 @@ export { NotificationsService } from './src/notifications.service';
 export { MaxPipe } from './src/max.pipe';
 export { PushNotificationsModule } from './src/push-notifications.module';
 export { PushNotificationsService } from './src/push-notifications.service';
+export { Icons, defaultIcons } from './src/icons';
+export { Options } from './src/options.type';

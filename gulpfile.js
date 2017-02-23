@@ -17,15 +17,15 @@ var gulp = require('gulp'),
         }
     };
 
-gulp.task('clean', () => {
+gulp.task('clean', function() {
     return del(paths.exampleClean)
 });
 
-gulp.task('move-example', ['clean'], () => {
+gulp.task('move-example', ['clean'], function() {
    return gulp.src(paths.src, { base: './' }).pipe(gulp.dest(paths.example))
 });
 
-gulp.task('concat-dts', () => {
+gulp.task('concat-dts', function() {
     return gulp.src(paths.declarations.src)
         .pipe(concat(paths.declarations.fileName))
         .pipe(deleteLines({
@@ -34,7 +34,7 @@ gulp.task('concat-dts', () => {
         .pipe(gulp.dest(paths.declarations.dest));
 });
 
-gulp.task('serve', ['move-example'], () => {
+gulp.task('serve', ['move-example'], function() {
 
     browserSync.init({
         server: {

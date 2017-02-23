@@ -1,6 +1,6 @@
 {
   "name": "angular2-notifications",
-  "version": "0.4.53",
+  "version": "0.4.54-local-release",
   "description": "An easy to use notification library for angular 2",
   "repository": {
     "type": "git",
@@ -73,5 +73,12 @@
     "zone.js": "^0.6.23"
   },
   "main": "./components.js",
+  "files": [
+    "/components.metadata.json",
+    "/components.d.ts",
+    "/components.ts",
+    "/components.js.map",
+    "/src"
+  ],
   "typings": "./components.d.ts"
 }
