@@ -40,16 +40,7 @@ export class PushNotificationsService {
 
             let n = this.createNotification(title, options);
 
-            if (this.sw) {
-                this.sw.getNotifications().then(notifications => {
-                    n = notifications[notifications.length - 1];
-
-                    n.onshow = (e: any) => obs.next({notification: n, event: e});
-                    n.onclick = (e: any) => obs.next({notification: n, event: e});
-                    n.onerror = (e: any) => obs.error({notification: n, event: e});
-                    n.onclose = () => obs.complete();
-                });
-            } else {
+            if (!this.sw) {
                 n.onshow = (e: any) => obs.next({notification: n, event: e});
                 n.onclick = (e: any) => obs.next({notification: n, event: e});
                 n.onerror = (e: any) => obs.error({notification: n, event: e});
