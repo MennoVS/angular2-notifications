@@ -51,7 +51,7 @@ export class PushNotificationsService {
 
     registerServiceWorker(swUrl: string = '/push-notifications-sw.js'): Observable<any> {
         const observable = (new Observable((obs: any) => {
-            if (!('serviceWorker' in navigator) || !('showNotification' in ServiceWorkerRegistration.prototype)) {
+            if (!('serviceWorker' in navigator && 'showNotification' in ServiceWorkerRegistration.prototype)) {
                 obs.error('Error registering service worker, ' +
                     'ServiceWorker push notifications are not available in this environment');
                 obs.complete();
